@@ -65,14 +65,14 @@ Follow the link to the Github Classroom repo and clone it to your local computer
 
 ▪ What was your requirements gathering and design process? Was it useful/successful?
    ```md
-   answer here
+   I started by creating a simple list of features and requirements I wanted for my e-commerce store, I had a pretty good idea of what I wanted to build so I didn't use figma and went straight into it. I also had a to do list that I'd write things to fix or add soon as I had the thought
    ```
 
 </br>
 
 ▪ Give a high level overview of your application and its features.
  ```md
-   answer here
+   This is a front-end only e-commerce shop built using next.js and react, I've got a lot of features such as filtering products by search, category and price, adding products to cart, saving cart state across pages, product detailed page, home page, about page, checkout page, pagination, responsive design and styling.
  ```
 
 
@@ -80,21 +80,21 @@ Follow the link to the Github Classroom repo and clone it to your local computer
 
 ▪ How can the user interact with this app?
  ```md
-   answer here
+They can add/remove products to cart, filter products, view single products in more detail, enter payment / shipping information on the checkout page etc.
  ```
 
 </br>
 
 ▪ Which specific methods from the React library have you utilized in your projects, and what are your experiences or insights regarding their usage and effectiveness?
  ```md
-   answer here
+useState, useEffect, useRef, useContext - They all were effective, useContext I struggled with but once I got worked was able to share the cart state across all pages
 ```
 
 </br>
 
 ▪ If you used Next.JS, could you please share your thoughts on the routing capabilities it offers? How does the routing functionality in Next.js compare to other frameworks or libraries you have worked with in terms of ease of use, flexibility, and any notable features?
  ```md
-   answer here
+   It made the routing seem so simple compared to node.js and express, I really like the routing capability of next.js
 ```
 
 </br>
@@ -102,14 +102,16 @@ Follow the link to the Github Classroom repo and clone it to your local computer
 ▪ What external tools/libraries have you used? How? Why?
 *(eg. bootstrap/material ui/tailwind)*
  ```md
-   answer here
+React-Bootstrap
+Bootswatch for themes
+FortAwesome icon library 
  ```
 
 </br>
 
 ▪ How might you extend the features of your application in future?
  ```md
- I was thinking I could add an actual payment integration using visa or paypal, this requires a backend
+ I was thinking I could add an actual payment integration using visa or paypal, this requires a backend. User login to add reviews to products and add items to wishlist
  Also I was thinking of adding a chatbot using the ChatGPT API but this also required a back end
  ```
 
@@ -123,7 +125,7 @@ Follow the link to the Github Classroom repo and clone it to your local computer
 
 
  ```md
-   answer here
+   FakeStore API
  ```
 
 
@@ -131,7 +133,7 @@ Follow the link to the Github Classroom repo and clone it to your local computer
 
 
  ```md
-   answer here
+Specifying the types makes it a lot easier to catch errors before you run the code, it seems like a more detailed and complete version of javascript to me 
  ```
 
 </br></br></br></br></br>
