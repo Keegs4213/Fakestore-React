@@ -1,0 +1,591 @@
+/* page.module.css*/
+/* Heading */
+.heading {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  text-shadow: 2px 2px 8px black;
+  font-size: 80px;
+  color: rgba(65, 65, 65, 0.982);
+}
+.headingLink {
+  text-decoration: none;
+}
+
+.headingContainer {
+  margin-top: 50px;
+}
+/* Nav Bar */
+.navbarClass {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: rgba(95, 95, 95, 0.982);
+}
+.dropdown-menu {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: black !important;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ccc;
+}
+/* Background */
+@import url("https://fonts.googleapis.com/css?family=Exo:400,700");
+
+.container {
+  background: linear-gradient(-45deg, #636363, #757575, #d2d2d2, #585858);
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+  background-position: center;
+  min-height: 100vh;
+  align-items: center;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Product table */
+.productRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Add this */
+  margin-top: 20px;
+}
+
+.productItem {
+  width: calc((100% / 3) - 10px); /* Adjust width and create a 10px gap */
+  padding: 10px;
+  box-sizing: border-box; /* Add this */
+}
+
+.productCard {
+  max-height: 450px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out !important; /* This adds a smooth transition */
+}
+.productCard:hover {
+  transform: scale(
+    1.05
+  ) !important; /* This scales the image up to 120% when hovered */
+}
+.imageContainer {
+  position: relative;
+  height: 100px; /* Set a height for the image container */
+  overflow: hidden; /* Add this to ensure the image stays within the container */
+}
+
+.productImage {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out !important; /* This adds a smooth transition */
+}
+.productImage:hover {
+  transform: scale(1.05);
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #f1f1f1;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 300px;
+  transition: transform 0.3s ease-in-out !important; /* This adds a smooth transition */
+}
+.cardOverlay:hover {
+  transform: scale(
+    1.1
+  ) !important; /* This scales the image up to 120% when hovered */
+}
+
+.productCard:hover .cardOverlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.productCardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #cfcfcf;
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+}
+.addToCartButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.addToCartBtn{
+  border: 2px solid black;
+}
+.addToCartBtn:hover {
+background-color:white !important;
+color: black !important;
+border: 2px solid black;
+}
+
+.productCard {
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.overlayContent {
+  text-align: center;
+}
+
+.viewProductButton {
+  margin-top: 10px;
+}
+.viewProductButton:hover {
+  background-color:white;
+  color: black;
+  border: 2px 2px 2px black;
+  }
+
+.cardTitle {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 5px;
+}
+@media (max-width: 500px) {
+  .cardTitle {
+    font-size: 10px;
+  }
+  .viewProductButton {
+    max-width: 70px;
+    max-height: 50px;
+    font-size: 6px;
+  }
+  .addToCartBtn {
+    max-width: 70px !important;
+    max-height: 50px !important;
+    font-size: 10px !important;
+  }
+  .addToCartButtonContainer {
+    max-width: 70px !important;
+    max-height: 50px !important;
+    font-size: 10px !important;
+  }
+  .cardText {
+    font-size: 10px !important;
+  }
+}
+.selector {
+  margin-top:10px;
+}
+
+.selectContainer .ant-select .ant-select-selector {
+  background-color: #cfcfcf !important;
+  border: 2px solid #000000 !important;
+  border-radius: 8px !important;
+}
+
+.selectContainer .ant-select .ant-select-arrow {
+  color: #000000 !important;
+}
+
+.cardText {
+  font-size: 20px;
+  margin-bottom: 0px;
+  color: #000000;
+}
+/* Product detailed page */
+.detailedProductImage {
+  border: 2.5px solid black;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out !important; /* This adds a smooth transition */
+  border-radius: 10px;
+}
+.detailedProductImage:hover {
+  transform: scale(1.02);
+}
+
+.container {
+  padding: 2rem;
+  color: #333;
+  font-family: Arial, sans-serif;
+  
+}
+
+.productPrice {
+  text-decoration: underline;
+  font-size: 20px !important;
+}
+.backButton {
+  margin-bottom: 2rem;
+  border: 2px solid black;
+}
+
+.productRow, .reviewRow {
+  margin-top: 2rem;
+}
+
+.detailedProductDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.detailedProductTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  
+}
+
+.productBadge {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  
+}
+
+.productDescription {
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 2.5px solid black;
+}
+
+.priceCard {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 2.5px solid black;
+}
+
+.productPrice {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.productRating {
+  margin-bottom: 1rem;
+}
+
+.reviewTitle {
+  margin-bottom: 1rem;
+}
+
+.reviewList {
+  margin-bottom: 1rem;
+}
+
+.reviewItem {
+  margin-bottom: 1rem;
+  border: 2.5px solid black !important;
+}
+
+.reviewName {
+  font-weight: 500;
+}
+
+/* Cart */
+.cartIcon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f9f9f9;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid black !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.cartContainer {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 15px; /* new border radius */
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+  transition: max-height 1s ease;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); /* container shadow */
+  padding: 20px; /* consistent spacing */
+  font-family: Arial, sans-serif; /* clean, modern font */
+}
+
+.checkoutContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+
+.checkoutBtn {
+  background-color: #3385ff !important;
+  color: white !important;
+  border: none !important;
+  padding: 15px 15px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  font-size: 14px !important;
+  margin: 4px 2px !important;
+  transition-duration: 0.4s !important; /* smooth transition */
+  cursor: pointer !important;
+  border-radius: 12px !important; /* rounded corners */
+}
+.checkoutBtn:hover {
+  background-color: rgb(18, 243, 55) !important;
+  color: #000000 !important;
+}
+.removeBtn {
+  color: white !important; /* white color for the text */
+  background-color: #ff5733 !important; /* same color as the checkout button */
+  border-color: #ff5733 !important; /* same color for the border */
+}
+
+.removeBtn:hover {
+  color: #ff5733 !important;
+  background-color: white !important; /* swap colors when hovering */
+  border-color: #ff5733 !important;
+}
+.cartTitle {
+  text-align: center; /* center the title */
+  font-weight: bold; /* make the text bold */
+  margin-bottom: 20px; /* add some space at the bottom */
+  text-decoration: none;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  text-shadow: 1px 1px 1px black;
+  font-size: 40px;
+  color: rgba(65, 65, 65, 0.982);
+}
+
+
+.totalContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  background-color: #e8e8e8;
+}
+
+.totalText {
+  margin-right: 10px;
+}
+.cartCheckoutTotalText {
+  font-size: 14px;
+}
+
+/* Styles the scrollbar */
+.cartContainer::-webkit-scrollbar {
+  width: 12px;
+}
+
+.cartContainer::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.cartContainer::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 20px;
+  border: 3px solid #f0f0f0;
+}
+
+.cartContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Loading Spinner */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #636363, #373737, #d2d2d2, #585858);
+  background-repeat: no-repeat;
+  background-size: 400% 400%;
+  background-position: center;
+  min-height: 100vh;
+  align-items: center;
+  animation: gradient 15s ease infinite;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  animation: rotate 1.4s infinite linear;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+  border-radius: 50%;
+}
+.loadingText {
+  margin-top: 20px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-inner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Pagination */
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* About page */
+.aboutTitle {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  text-shadow: 1px 1px 4px black;
+  font-size: 50px;
+  color: rgba(65, 65, 65, 0.982);
+}
+.aboutText {
+  color: black;
+  font-size: 22px;
+  font-family: "Times New Roman", Times, serif;
+}
+.aboutContainer {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #000000;
+  border-radius: 8px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+}
+.contactTitle {
+  color: black;
+  font-size: 22px;
+  font-family: arial;
+}
+.contactForm {
+  background-color: white !important;
+  border: 2px solid #000000 !important;
+  border-radius: 8px !important;
+  padding: 10px !important;
+  transition: box-shadow 0.3s ease !important;
+}
+.contactButton {
+  margin-top: 10px;
+}
+
+/* Home */
+.homeProductImage {
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will make the image cover the entire container while preserving its aspect ratio */
+}
+
+.homeProductImage:hover {
+  transform: scale(1.2);
+}
+.imageContainer {
+  margin-top: 10px;
+  position: relative;
+  max-width: 100%;
+  height: 600px; /* Or any other height that fits your design */
+  overflow: hidden; /* This will ensure that the image doesn't overflow the container */
+}
+
+.imageCaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f2f2f2;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Checkout */
+.checkoutTotalText {
+  font-size: 22px;
+}
+.checkoutText {
+  text-align: center; /* center the title */
+  font-weight: bold; /* make the text bold */
+  margin-bottom: 20px; /* add some space at the bottom */
+  text-decoration: none;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 20px;
+  color: rgba(65, 65, 65, 0.982);
+}
+.completePurchaseBtn {
+    margin-top:20px;
+    background-color: #3385ff !important;
+    color: white !important;
+    border: none !important;
+    padding: 15px 15px !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    display: inline-block !important;
+    font-size: 14px !important;
+  
+    transition-duration: 0.4s !important; /* smooth transition */
+    cursor: pointer !important;
+    border-radius: 12px !important; /* rounded corners */
+  }
+  .completePurchaseBtn:hover {
+    background-color: rgb(30, 163, 52) !important;
+    color: #000000 !important;
+  }
