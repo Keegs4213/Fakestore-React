@@ -33,7 +33,7 @@ const AboutPage = () => {
                 <u> F A U X: Adjective</u>
                 <br></br>
                 made in imitation; artificial.<br></br>
-                "a rope of faux pearls"<br></br>
+                &quot;a rope of faux pearls&quot;<br></br>
                 not genuine; fake or false.
                 <br></br>
                 <br></br>F A U X is your one stop shop for all your fake product
