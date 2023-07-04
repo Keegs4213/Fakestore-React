@@ -1,4 +1,4 @@
-//home.tsx
+//home.jsx
 import React, { useState, useRef } from "react";
 import NavigationBar from "../src/app/components/NavBar";
 import { Container, Row, Col } from "react-bootstrap";

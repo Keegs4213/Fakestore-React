@@ -1,4 +1,4 @@
-//pages/allProducts/index.tsx
+//pages/allProducts/index.jsx
 "use client";
 import React, { useState, useEffect, useRef, useContext } from "react";
 import useSWR from "swr";

@@ -1,4 +1,4 @@
-// pages/_app.js
+// pages/_app.jsx
 import React from 'react';
 import { CartContext, CartProvider} from '../src/app/components/CartContext';
 import '../src/app/page.module.css';
