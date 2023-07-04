@@ -8,6 +8,17 @@ import Products from "../../src/app/components/Products"
 // Modifying fetcher to make requests to the external Fake Store API
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
+interface Product {
+    id: number;
+    title: string;
+    price: number;
+    description: string;
+    category: string;
+    image: string;
+    // include any other properties that a product might have
+  }
+
+
 export default function CategoryPage() {
     const router = useRouter();
     const { slug } = router.query;

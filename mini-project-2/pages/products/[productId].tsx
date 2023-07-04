@@ -7,6 +7,7 @@ interface PageProps {
   productId: string;
 }
 
+
 const Page: FC<PageProps> = () => {
   const router = useRouter();
   let productId = router.query.productId as string;

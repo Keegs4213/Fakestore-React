@@ -20,7 +20,7 @@ import { CartProvider } from "../../src/app/components/CartContext";
 import Head from "next/head";
 import { Select } from "antd";
 
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function Home() {
   const { data, error } = useSWR("https://fakestoreapi.com/products", fetcher);
@@ -142,7 +142,7 @@ export default function Home() {
     (filteredData ? filteredData.length : 0) / productsPerPage
   );
 
-  const handlePageChange = (pageNumber: number) => {
+  const handlePageChange = (pageNumber) => {
     setActivePage(pageNumber);
   };
 
@@ -174,7 +174,7 @@ export default function Home() {
             </Select>
           </div>
           <div className={styles.productRow}>
-            {productsToDisplay.map((product: any) => (
+            {productsToDisplay.map((product) => (
               <div key={product.id} className={styles.productItem}>
                 <Card className={styles.productCard}>
                   <div className={styles.imageContainer}>

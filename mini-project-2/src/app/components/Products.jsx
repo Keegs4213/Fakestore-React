@@ -1,18 +1,7 @@
-//Products.jsx
-import useSWR from 'swr'
+// Products.jsx
+import React from 'react';
 
-const fetcher = (url) => fetch(url).then((res) => res.json())
-
-const Products = () => {
-  const { data: products, error } = useSWR(
-    'https://fakestoreapi.com/products',
-    fetcher
-  )
-
-  if (error) {
-    return <div>Error loading products</div>
-  }
-
+const Products = ({products}) => {
   if (!products) {
     return <div>Loading products...</div>
   }
@@ -34,4 +23,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default Products;
