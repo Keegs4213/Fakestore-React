@@ -211,10 +211,15 @@ border: 2px solid black;
   margin-top:10px;
 }
 
+.selectContainer{
+  margin-top: 10px;
+}
+
 .selectContainer .ant-select .ant-select-selector {
   background-color: #cfcfcf !important;
   border: 2px solid #000000 !important;
   border-radius: 8px !important;
+ 
 }
 
 .selectContainer .ant-select .ant-select-arrow {

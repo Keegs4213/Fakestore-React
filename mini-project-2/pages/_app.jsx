@@ -1,8 +1,8 @@
 // pages/_app.jsx
-import React from 'react';
-import { CartContext, CartProvider} from '../src/app/components/CartContext';
-import '../src/app/page.module.css';
-import "../src/app/globals.css"
+import React from "react";
+import { CartContext, CartProvider } from "../src/app/components/CartContext";
+import "../src/app/page.module.css";
+import "../src/app/globals.css";
 
 // Parent component (e.g., App.jsx)
 // const handleCategoryChange = (categories: string[] | string) => {
@@ -19,6 +19,6 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <CartProvider>
       <Component {...pageProps} />
-      </CartProvider>
+    </CartProvider>
   );
 }

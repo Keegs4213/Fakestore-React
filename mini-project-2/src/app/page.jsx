@@ -18,6 +18,7 @@ import { CartContext } from "./components/CartContext";
 import { CartProvider } from "./components/CartContext";
 import Head from "next/head";
 import { Select } from "antd";
+import SelectPrice from "./components/SelectPrice";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -159,18 +160,7 @@ export default function Home() {
             onSearch={handleSearch}
             onCategoryChange={handleCategoryChange}
           />
-          <div className={styles.selectContainer}>
-            <Select
-              className={styles.selector}
-              defaultValue="none"
-              style={{ width: 150 }}
-              onChange={setPriceSorting}
-            >
-              <Select.Option value="none">Sort by price</Select.Option>
-              <Select.Option value="lowToHigh">Low to High</Select.Option>
-              <Select.Option value="highToLow">High to Low</Select.Option>
-            </Select>
-          </div>
+          <SelectPrice/>
           <div className={styles.productRow}>
             {productsToDisplay.map((product) => (
               <div key={product.id} className={styles.productItem}>

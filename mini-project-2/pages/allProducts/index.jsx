@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import useSWR from "swr";
 import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
 import MyApp from "../_app";
-import "../../public/bootstrap.min.css"
+import "../../public/bootstrap.min.css";
 import styles from "../../src/app/page.module.css";
 import AddToCart from "../../src/app/components/AddToCart";
 import Cart from "../../src/app/components/Cart";
@@ -19,6 +19,7 @@ import { CartContext } from "../../src/app/components/CartContext";
 import { CartProvider } from "../../src/app/components/CartContext";
 import Head from "next/head";
 import { Select } from "antd";
+import { SelectPrice } from "../../src/app/components/SelectPrice";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -161,7 +162,8 @@ export default function Home() {
             onSearch={handleSearch}
             onCategoryChange={handleCategoryChange}
           />
-          <div className={styles.selectContainer}>
+          <SelectPrice onChange={setPriceSorting} />
+          {/* <div className={styles.selectContainer}>
             <Select
               className={styles.selector}
               defaultValue="none"
@@ -172,7 +174,7 @@ export default function Home() {
               <Select.Option value="lowToHigh">Low to High</Select.Option>
               <Select.Option value="highToLow">High to Low</Select.Option>
             </Select>
-          </div>
+          </div> */}
           <div className={styles.productRow}>
             {productsToDisplay.map((product) => (
               <div key={product.id} className={styles.productItem}>
